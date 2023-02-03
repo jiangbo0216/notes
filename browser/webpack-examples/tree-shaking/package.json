@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build-watch-c": "rm -rf dist && concurrently \"npm:build-watch:*\"",
+    "build-watch-n": "rm -rf dist && run-p \"build-watch:*\"",
+    "build-watch:disable-minimize": "webpack -c webpack-disable-minimize.config.js -w",
+    "build-watch:minimize": "webpack -c webpack-minimize.config.js -w"
   },
   "keywords": [],
   "author": "",

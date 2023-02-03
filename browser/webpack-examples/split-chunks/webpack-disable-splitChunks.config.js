@@ -1,5 +1,5 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 /**
@@ -11,22 +11,18 @@ const config = {
     main: './src',
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist/disable-splitChunks'),
     filename: '[name].js',
     clean: true,
   },
   optimization: {
     // Instruct webpack not to obfuscate the resulting code
     minimize: false,
-    // splitChunks: false,
-    splitChunks: {
-        chunks: 'all',
-        minSize: 0,
-    },
+    splitChunks: false,
   },
   context: __dirname,
   plugins: [
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ]
 };
 

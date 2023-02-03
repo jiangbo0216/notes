@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./dist && webpack",
+    "build": "rm -rf ./dist && pnpm build-disable-splitChunks",
+    "build-disable-splitChunks": "webpack -c webpack-disable-splitChunks.config.js",
     "start": "http-server"
   },
   "keywords": [],
