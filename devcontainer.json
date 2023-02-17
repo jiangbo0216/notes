@@ -1,0 +1,13 @@
+{
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "jiangbo0216/notes": {
+          "permissions": {
+            "permissions": "write-all"
+          }
+        }
+      }
+    }
+  }
+}
