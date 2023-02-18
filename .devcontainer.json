@@ -2,10 +2,13 @@
   "customizations": {
     "codespaces": {
       "repositories": {
-        "jiangbo0216/notes": {
+        "jiangbo0216/*": {
           "permissions": {
             "permissions": "write-all"
           }
+        },
+        "coach-i-wanna-learn/*": {
+          "permissions": "write-all"
         }
       }
     }
